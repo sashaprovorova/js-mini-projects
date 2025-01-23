@@ -1,0 +1,36 @@
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 2rem;
+}
+
+button {
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  background-color: purple;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsla(300, 100%, 25%, 0.746);
+}
+
+button:active {
+  background-color: hsla(300, 100%, 25%, 0.88);
+}
+
+input{
+  font-size: 2rem;
+  width: 150px;
+  text-align: center;
+}
+
+img{
+  inline-size: 150px;
+  block-size: 150px;
+  margin: 10px;
+}
