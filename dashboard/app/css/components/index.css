@@ -1,0 +1,24 @@
+.card {
+  padding: 1.25 rem;
+}
+
+.header {
+  background: red !important;
+}
+@media (min-width: 87.4375em) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.toggle {
+  border: none;
+}
+.toggle_button {
+  width: 1 rem;
+  height: 1 rem;
+  border-radius: 50%;
+  background-color: var(--TOGGLE);
+}
+
+/*# sourceMappingURL=index.css.map */

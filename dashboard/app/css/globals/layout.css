@@ -1,0 +1,12 @@
+.container {
+  max-width: 69.375 rem;
+  padding: 0 1.5625 rem;
+  margin: 0 auto;
+}
+@media (min-width: 87.4375em) {
+  .container {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

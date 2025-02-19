@@ -1,0 +1,11 @@
+.header {
+  background: red !important;
+}
+@media (min-width: 87.4375em) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

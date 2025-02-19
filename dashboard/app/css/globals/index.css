@@ -1,0 +1,71 @@
+:root {
+  --LIMEGREEN: hsl(163, 72%, 41%);
+  --BRIGHTRED: hsl(356, 69%, 56%);
+  --FACEBOOK-COLOR: hsl(208, 92%, 53%);
+  --TWITTER-COLOR: hsl(203, 89%, 53%);
+  --INSTAGRAM-START: hsl(37, 97%, 70%);
+  --INSTAGRAM-END: hsl(329, 70%, 58%);
+  --YOUTUBE-COLOR: hsl(348, 97%, 39%);
+  --TOGGLE-START: hsl(210, 78%, 56%);
+  --TOGGLE-END: hsl(146, 68%, 55%);
+  --TOGGLE: hsl(230, 22%, 74%);
+  --DARK-BG: hsl(230, 17%, 14%);
+  --DARK-TOP-BG: hsl(232, 19%, 15%);
+  --DARK-CARD: hsl(228, 28%, 20%);
+  --DARK-TEXT1: hsl(228, 34%, 66%);
+  --DARK-TEXT2: hsl(0, 0%, 100%);
+  --LIGHT-BG: hsl(0, 0%, 100%);
+  --LIGHT-TOP-BG: hsl(225, 100%, 98%);
+  --LIGHT-CARD: hsl(227, 47%, 96%);
+  --LIGHT-TEXT1: hsl(228, 12%, 44%);
+  --LIGHT-TEXT2: hsl(230, 17%, 14%);
+}
+
+:root {
+  --FONT-INTER: Inter, sans-serif;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--FONT-INTER);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 69.375 rem;
+  padding: 0 1.5625 rem;
+  margin: 0 auto;
+}
+@media (min-width: 87.4375em) {
+  .container {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
