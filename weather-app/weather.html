@@ -4,9 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
+  <link rel="stylesheet" href="./weather.css">
 </head>
 <body>
-  
+  <form class="weatherForm">
+    <input type="text" class="cityInput" placeholder="Enter city">
+    <button type="submit">Get Weather</button>
+  </form>
+  <div class="card" style="display: none;">
+    <!-- <h1 class="cityDisplay">Miami</h1>
+    <p class="tempDisplay">98°F</p>
+    <p class="humidityDisplay">Humidity: 75%</p>
+    <p class="descDisplay">Clear Skies</p>
+    <p class="weatherEmoji">☀️</p>
+    <p class="errorDisplay"></p> -->
+  </div>
 </body>
 <script type="module" src="./weather.js"></script>
 </html>
