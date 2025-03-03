@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  margin-top: 2.25rem;
+}
+@media (min-width: 40em) {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__title {
+  width: 100%;
+}
+@media (min-width: 40em) {
+  .header__title {
+    width: auto;
+  }
+}
+.header__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--ALTERNATIVE-COLOR);
+}/*# sourceMappingURL=header.css.map */

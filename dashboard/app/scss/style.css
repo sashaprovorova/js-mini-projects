@@ -1,0 +1,360 @@
+:root {
+  --LIMEGREEN: hsl(163, 72%, 41%);
+  --BRIGHTRED: hsl(356, 69%, 56%);
+  --FACEBOOK-COLOR: hsl(208, 92%, 53%);
+  --TWITTER-COLOR: hsl(203, 89%, 53%);
+  --INSTAGRAM-START: hsl(37, 97%, 70%);
+  --INSTAGRAM-MIDDLE: hsl(5, 77%, 71%);
+  --INSTAGRAM-END: hsl(329, 70%, 58%);
+  --YOUTUBE-COLOR: hsl(348, 97%, 39%);
+  --BG-COLOR: hsl(0, 0%, 100%);
+  --TEXT-COLOR:hsl(230, 17%, 14%);
+  --ALTERNATIVE-COLOR: hsl(228, 12%, 44%);
+  --CARD-BG: hsl(227, 47%, 96%);
+  --CARD-HOVER: hsl(228, 33%, 91%);
+  --TOGGLE-START: hsl(230, 22%, 74%);
+  --TOGGLE-END: hsl(230, 22%, 74%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --BG-COLOR: hsl(230, 17%, 14%);
+    --TEXT-COLOR: hsl(0, 0%, 100%);
+    --ALTERNATIVE-COLOR: hsl(228, 34%, 66%);
+    --CARD-BG: hsl(228, 28%, 20%);
+    --CARD-HOVER: hsl(228, 25%, 27%);
+    --TOGGLE-START: hsl(210, 78%, 56%);
+    --TOGGLE-END: hsl(146, 68%, 55%);
+  }
+}
+body.light {
+  --BG-COLOR: hsl(0, 0%, 100%);
+  --TEXT-COLOR:hsl(230, 17%, 14%);
+  --ALTERNATIVE-COLOR: hsl(228, 12%, 44%);
+  --CARD-BG: hsl(227, 47%, 96%);
+  --CARD-HOVER: hsl(228, 33%, 91%);
+  --TOGGLE-START: hsl(230, 22%, 74%);
+  --TOGGLE-END: hsl(230, 22%, 74%);
+}
+
+body.dark {
+  --BG-COLOR: hsl(230, 17%, 14%);
+  --TEXT-COLOR: hsl(0, 0%, 100%);
+  --ALTERNATIVE-COLOR: hsl(228, 34%, 66%);
+  --CARD-BG: hsl(228, 28%, 20%);
+  --CARD-HOVER: hsl(228, 25%, 27%);
+  --TOGGLE-START: hsl(210, 78%, 56%);
+  --TOGGLE-END: hsl(146, 68%, 55%);
+}
+
+:root {
+  --FONT-INTER: Inter, sans-serif;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--FONT-INTER);
+  background-color: var(--BG-COLOR);
+  color: var(--TEXT-COLOR);
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.1875rem;
+}
+@media (min-width: 71.875em) {
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (min-width: 71.875em) {
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 69.375rem;
+  padding: 0 1.5625rem;
+  margin: 0 auto;
+}
+@media (min-width: 71.875em) {
+  .container {
+    padding: 0;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 40em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 71.875em) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--CARD-BG);
+  color: var(--ALTERNATIVE-COLOR);
+  text-align: center;
+  padding: 1.5625rem;
+  border-radius: 0.3125rem;
+  list-style: none;
+}
+.card:hover {
+  background: var(--CARD-HOVER);
+  transition: background 150ms ease-in-out;
+  cursor: pointer;
+}
+.card--facebook {
+  border-top: 0.3125rem solid var(--FACEBOOK-COLOR);
+}
+.card--twitter {
+  border-top: 0.3125rem solid var(--TWITTER-COLOR);
+}
+.card--instagram {
+  padding-top: 1.875rem;
+}
+.card--instagram::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.3125rem;
+  width: 100%;
+  background: linear-gradient(225deg, var(--INSTAGRAM-END), var(--INSTAGRAM-MIDDLE) 50.91%, var(--INSTAGRAM-START) 100%);
+}
+.card--youtube {
+  border-top: 0.3125rem solid var(--YOUTUBE-COLOR);
+}
+.card__platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  margin-top: 0.3125rem;
+  height: 1.75rem;
+}
+.card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.card__icon {
+  margin-right: 0.5rem;
+}
+.card__username {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.card__followers {
+  margin-bottom: 1.5625rem;
+}
+.card__count {
+  color: var(--TEXT-COLOR);
+  font-weight: 700;
+  letter-spacing: -0.125rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.card__count--big {
+  font-size: 3.5rem;
+}
+.card__count--small {
+  font-size: 2rem;
+}
+.card__label {
+  color: var(--ALTERNATIVE-COLOR);
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.card__change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.card__change--up {
+  color: var(--LIMEGREEN);
+}
+.card__change--down {
+  color: var(--BRIGHTRED);
+}
+
+.header {
+  display: flex;
+  margin-top: 2.25rem;
+}
+@media (min-width: 40em) {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__title {
+  width: 100%;
+}
+@media (min-width: 40em) {
+  .header__title {
+    width: auto;
+  }
+}
+.header__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+  font-family: var(--ALTERNATIVE-COLOR);
+}
+
+.toggle {
+  display: grid;
+  grid-template-columns: 1fr 3rem;
+  border: none;
+  margin: 0;
+}
+.toggle input[type=radio] {
+  opacity: 0;
+  margin: 0 -0.125rem 0 -0.125rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.toggle input[type=radio]:focus ~ .toggle__button {
+  border: 2px solid #fff;
+}
+.toggle label {
+  font-size: 0.875rem;
+}
+.toggle label[for=dark] {
+  line-height: 1.5rem;
+  margin-right: 0.8125rem;
+}
+.toggle__wrapper {
+  height: 1.5rem;
+  position: relative;
+}
+.toggle__background {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: linear-gradient(225deg, var(--TOGGLE-END) 0%, var(--TOGGLE-START) 98.02%);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  pointer-events: none;
+}
+.toggle__button {
+  position: absolute;
+  left: 0.1875rem;
+  top: 0.1875rem;
+  right: 100%;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 50%;
+  background-color: var(--BG-COLOR);
+  transition: all 150ms ease-in-out;
+}
+.toggle #light:checked ~ .toggle__button {
+  right: 0.1875rem;
+  left: calc(100% - 1.3125rem);
+}
+.toggle #system:checked ~ .toggle__button {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%);
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  justify-items: start;
+  gap: 1.4375rem;
+}
+.card-grid .card__count {
+  align-self: end;
+  margin-bottom: 0;
+}
+.card-grid img,
+.card-grid .card__change {
+  justify-self: end;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-family: inherit;
+  padding: 2.875rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 40em) {
+  .attribution {
+    flex-direction: row;
+    gap: 0.375rem;
+  }
+}/*# sourceMappingURL=style.css.map */

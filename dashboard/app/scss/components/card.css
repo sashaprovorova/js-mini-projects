@@ -1,0 +1,111 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.875rem;
+  list-style: none;
+  padding: 0;
+}
+@media (min-width: 40em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 71.875em) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--CARD-BG);
+  color: var(--ALTERNATIVE-COLOR);
+  text-align: center;
+  padding: 1.5625rem;
+  border-radius: 0.3125rem;
+  list-style: none;
+}
+.card:hover {
+  background: var(--CARD-HOVER);
+  transition: background 150ms ease-in-out;
+  cursor: pointer;
+}
+.card--facebook {
+  border-top: 0.3125rem solid var(--FACEBOOK-COLOR);
+}
+.card--twitter {
+  border-top: 0.3125rem solid var(--TWITTER-COLOR);
+}
+.card--instagram {
+  padding-top: 1.875rem;
+}
+.card--instagram::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0.3125rem;
+  width: 100%;
+  background: linear-gradient(225deg, var(--INSTAGRAM-END), var(--INSTAGRAM-MIDDLE) 50.91%, var(--INSTAGRAM-START) 100%);
+}
+.card--youtube {
+  border-top: 0.3125rem solid var(--YOUTUBE-COLOR);
+}
+.card__platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.75rem;
+  margin-top: 0.3125rem;
+  height: 1.75rem;
+}
+.card__subtitle {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.card__icon {
+  margin-right: 0.5rem;
+}
+.card__username {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.card__followers {
+  margin-bottom: 1.5625rem;
+}
+.card__count {
+  color: var(--TEXT-COLOR);
+  font-weight: 700;
+  letter-spacing: -0.125rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.card__count--big {
+  font-size: 3.5rem;
+}
+.card__count--small {
+  font-size: 2rem;
+}
+.card__label {
+  color: var(--ALTERNATIVE-COLOR);
+  font-size: 0.75rem;
+  letter-spacing: 0.3125rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.card__change {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+.card__change--up {
+  color: var(--LIMEGREEN);
+}
+.card__change--down {
+  color: var(--BRIGHTRED);
+}/*# sourceMappingURL=card.css.map */
