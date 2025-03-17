@@ -21,11 +21,13 @@ You can view the live page here: [Patrix Landing Page](https://superlative-tanuk
 
 ---
 
-# ✨ Custom JavaScript
+## ✨ Custom JavaScript
 
 Most of the JavaScript functionality is powered by Bootstrap, but I wrote one custom function for filtering and displaying relevant projects by click on a certain category.
 
-### 📸 Image Demos
+---
+
+## 📸  Image Demos
 
 Here are some screenshots demonstrating key features of the landing page:
 
@@ -37,6 +39,6 @@ Here are some screenshots demonstrating key features of the landing page:
 
 <img src="./readme_images/categories.png" alt="Categories." width="600"/>
 
-### 3. **Accordion to Hide and Show Questions** 📱
+### 3. **Accordion to Hide and Show Questions** 
 
 <img src="./readme_images/questions.png" alt="Questions." width="600"/>
