@@ -23,6 +23,6 @@ A simple web-based text-to-speech (TTS) application that allows users to enter t
 ## 🏗️ Technologies Used
 
 - **HTML**: Provides the basic structure.
-- **CSS**: Styles the interface (if applicable).
+- **CSS**: Styles the interface.
 - **JavaScript**: Handles speech synthesis and voice selection.
 - **Web Speech API**: Enables text-to-speech functionality.
