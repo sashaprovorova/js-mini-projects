@@ -15,7 +15,7 @@ A simple image search application using the **Unsplash API**. Users can enter a 
 ## 🏗️ Technologies Used
 
 - **HTML**: Provides the structure of the web page.
-- **CSS**: Styles the layout (if applicable).
+- **CSS**: Styles the layout.
 - **JavaScript**: Handles API requests and DOM manipulation.
 - **Unsplash API**: Fetches images based on user queries.
 
